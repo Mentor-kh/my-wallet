@@ -1,0 +1,21 @@
+<div class="filter">
+  <mat-form-field>
+    <mat-label>Categories</mat-label>
+    <mat-select [formControl]="categoriesControl" multiple [(ngModel)]="checkedCategories"
+      [compareWith]="checkedCategoriesState">
+      <mat-option *ngFor="let category of categoriesList" [value]="category">{{category}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [min]="startDate" [max]="endDate" [matDatepicker]="startDate" placeholder="Choose start date"
+      (dateChange)="startEvent('change', $event)" [value]="filters.startDate">
+    <mat-datepicker-toggle matSuffix [for]=" startDate"></mat-datepicker-toggle>
+    <mat-datepicker #startDate [startAt]="startDate"></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [min]="startDate" [max]="endDate" [matDatepicker]="endDate" placeholder="Choose end date"
+      (dateChange)="endEvent('change', $event)" [value]="filters.endDate">
+    <mat-datepicker-toggle matSuffix [for]=" endDate"></mat-datepicker-toggle>
+    <mat-datepicker #endDate [startAt]="endDate"></mat-datepicker>
+  </mat-form-field>
+</div>

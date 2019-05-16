@@ -1,0 +1,20 @@
+<mat-tab-group>
+  <mat-tab label="Bar chart">
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+      [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+    </canvas>
+  </mat-tab>
+  <mat-tab label="Pie chart">
+    <div class="chart">
+      <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+        [options]="pieChartOptions" [plugins]="pieChartPlugins" [colors]="pieChartColors" [legend]="pieChartLegend">
+      </canvas>
+    </div>
+    <div>
+      <button mat-button mat-raised-button color="primary" (click)="pieChartLegend=!pieChartLegend">Toggle
+        Legend</button>
+      <button mat-button mat-raised-button color="primary" (click)="changeLegendPosition()">Change Legend
+        Position</button>
+    </div>
+  </mat-tab>
+</mat-tab-group>

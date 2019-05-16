@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 16px 8px;
+}
+
+
+.mat-footer-row {
+  font-weight: bold;
+}
+.mat-header-cell {
+  font-size: 16px;
+  color: black;
+}
+.mat-footer-cell {
+  font-size: 20px;
+}
+.actions {
+  visibility: hidden;
+  width: 40px;
+
+  .mat-button-ripple {
+    pointer-events: all;
+    cursor: pointer;
+  }
+}
+mat-row {
+  &:hover {
+    .actions {visibility: visible;}
+  }
+}
+mat-cell, mat-footer-cell, mat-header-cell {
+  flex: 3;
+}
+.mat-column-id,
+.mat-column-actions {
+  flex: 1;
+}

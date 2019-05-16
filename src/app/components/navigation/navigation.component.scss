@@ -1,0 +1,17 @@
+.wrap {
+  text-align: center;
+}
+.navigation {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: gray;
+  border-radius: 5px;
+
+  button {
+    color: white;
+  }
+}
+.active-link {
+  background: blue;
+}

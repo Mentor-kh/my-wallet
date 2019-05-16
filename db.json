@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "date": "Apr 15 1998 13 00: 00",
+      "category": "taxes",
+      "positive": false,
+      "cost": 4
+    },
+    {
+      "id": 1,
+      "date": "Apr 15 1998 14: 00: 00",
+      "category": "car",
+      "positive": true,
+      "cost": 25
+    },
+    {
+      "id": 2,
+      "date": "Apr 15 2010 14: 00: 00",
+      "category": "income",
+      "positive": true,
+      "cost": 14
+    },
+    {
+      "id": 3,
+      "date": "Apr 15 2010 14: 00: 00",
+      "category": "shopping",
+      "positive": false,
+      "cost": 2
+    },
+    {
+      "id": 4,
+      "date": "Apr 15 2011 14: 00: 00",
+      "category": "meal",
+      "positive": false,
+      "cost": 5
+    },
+    {
+      "id": 5,
+      "date": "Apr 15 2011 14: 00: 00",
+      "category": "taxes",
+      "positive": false,
+      "cost": 24
+    },
+    {
+      "id": 6,
+      "date": "Apr 15 2016 14: 00: 00",
+      "category": "taxes",
+      "positive": false,
+      "cost": 24
+    },
+    {
+      "id": 7,
+      "date": "Apr 15 2016 14: 00: 00",
+      "category": "car",
+      "positive": false,
+      "cost": 5
+    },
+    {
+      "id": 8,
+      "date": "Apr 15 2016 14: 00: 00",
+      "category": "income",
+      "positive": true,
+      "cost": 14
+    },
+    {
+      "id": 9,
+      "date": "Apr 15 2019 14: 00: 00",
+      "category": "shopping",
+      "positive": false,
+      "cost": 2
+    },
+    {
+      "id": 10,
+      "date": "Apr 15 2019 14: 00: 00",
+      "category": "meal",
+      "positive": false,
+      "cost": 5
+    },
+    {
+      "id": 11,
+      "date": "Apr 15 2019 14: 00: 00",
+      "category": "taxes",
+      "positive": false,
+      "cost": 24
+    }
+  ],
+  "filteredData": [],
+  "filters": [],
+  "categories": [
+    {
+      "category": "income",
+      "positive": true
+    },
+    {
+      "category": "taxes",
+      "positive": false
+    },
+    {
+      "category": "meal",
+      "positive": false
+    },
+    {
+      "category": "shopping",
+      "positive": false
+    },
+    {
+      "category": "drink",
+      "positive": false
+    },
+    {
+      "category": "car",
+      "positive": false
+    },
+    {
+      "category": "presents",
+      "positive": false
+    }
+  ],
+  "isAuthenticated": false,
+  "profile": {
+    "name": "Alex Rich",
+    "amount": 50000
+  }
+}
