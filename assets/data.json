@@ -1,0 +1,76 @@
+{
+  "scope": {
+    "categories": {
+      "0": "taxes",
+      "1": "meal",
+      "2": "shopping",
+      "3": "drink",
+      "4": "car",
+      "5": "presents"
+    }
+  },
+  "user_id": {
+    "user_info": {
+      "name": "Alex Rich",
+      "amount": 50000
+    },
+    "data": {
+      "0": {
+        "date": "30-04-2019",
+        "category": "meal",
+        "value": 200,
+        "type": true,
+        "description": "Here goes description"
+      },
+      "1": {
+        "date": "30-04-2019",
+        "category": "taxes",
+        "value": 100,
+        "type": false,
+        "description": "Here goes description"
+      },
+      "2": {
+        "date": "30-04-2019",
+        "category": "shopping",
+        "value": 300,
+        "type": false,
+        "description": "Here goes description"
+      },
+      "3": {
+        "date": "30-04-2019",
+        "category": "car",
+        "value": 300,
+        "type": false,
+        "description": "Here goes description"
+      },
+      "4": {
+        "date": "30-04-2019",
+        "category": "presents",
+        "value": 300,
+        "type": false,
+        "description": "Here goes description"
+      },
+      "5": {
+        "date": "30-04-2019",
+        "category": "drink",
+        "value": 300,
+        "type": false,
+        "description": "Here goes description"
+      },
+      "6": {
+        "date": "30-04-2019",
+        "category": "presents",
+        "value": 300,
+        "type": false,
+        "description": "Here goes description"
+      },
+      "7": {
+        "date": "30-04-2019",
+        "category": "car",
+        "value": 300,
+        "type": false,
+        "description": "Here goes description"
+      }
+    }
+  }
+}
