@@ -17,7 +17,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -106,6 +106,7 @@ import { AuthGuard } from './services/auth-guard.service';
     MatTabsModule,
     MatPaginatorModule,
     MatIconModule,
+    FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,

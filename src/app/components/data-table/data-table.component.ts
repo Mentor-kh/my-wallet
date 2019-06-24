@@ -47,7 +47,6 @@ export class DataTableComponent implements OnDestroy {
   ) {
     this.$loadingData = this.store.select('scope', 'isLoading').subscribe((data: boolean) => {
       this.loadingFlag = data;
-      return data;
     });
     this.$filterData = this.store.select('scope', 'filterData').subscribe((data: ITransaction[]) => {
       this.transactions = data;

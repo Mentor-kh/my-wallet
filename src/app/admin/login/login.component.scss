@@ -6,3 +6,12 @@
         display: block;
     }
 }
+dl {
+    dt {
+        float: left;
+        margin-right: 5px;
+    }
+    dd {
+        margin: 0;
+    }
+}

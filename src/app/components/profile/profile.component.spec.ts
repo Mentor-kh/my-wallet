@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileComponent } from './profile.component';
+import { MatCardModule } from '@angular/material';
+import { Store, StoreModule } from '@ngrx/store';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -8,9 +10,16 @@ describe('ProfileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileComponent ]
+      imports: [
+        MatCardModule,
+        StoreModule.forRoot({})
+      ],
+      declarations: [ProfileComponent],
+      providers: [
+        Store
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

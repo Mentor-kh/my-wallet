@@ -17,7 +17,16 @@ export class ProfileComponent implements OnDestroy {
     private store: Store<IScope>
   ) {
     this.$loadingSubscribe = this.store.select('scope', 'isLoading').subscribe((data: boolean) => data);
-    this.$profile = this.store.select('scope', 'profile').subscribe((data: boolean) => this.userData = data);
+    this.$profile = this.store.select('scope', 'profile').subscribe((data: boolean) => {
+      if (!data) {
+        this.userData = {
+          name: '',
+          amount: null
+        };
+      } else {
+        this.userData = data;
+      }
+    });
   }
 
   public ngOnDestroy(): void {

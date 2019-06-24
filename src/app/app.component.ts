@@ -23,8 +23,7 @@ export class AppComponent implements OnDestroy {
     private authService: AuthService
   ) {
     this.$isAuthenticated = this.store.select('scope', 'isAuthenticated').subscribe((value: boolean) => {
-      if (this.authService.isLoggedIn()) {
-        this.isAuthenticated = true;
+      if (JSON.parse(localStorage.getItem('user')) !== null) {
         this.store.dispatch(new LogIn(true));
         this.$user = this.store.select('scope', 'profile').subscribe((user: any) => {
           this.name = user.name;

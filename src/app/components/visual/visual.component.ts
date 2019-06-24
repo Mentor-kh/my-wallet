@@ -25,8 +25,8 @@ export class VisualComponent implements OnInit, OnDestroy {
       }
     }
   };
-  public transactions: ITransaction[];
-  public categories: ICategories[];
+  public transactions: ITransaction[] = [];
+  public categories: ICategories[] = [];
   public filterCategories: any;
   public barChartLabels: Label[] = [];
   public barChartType: ChartType = 'bar';
@@ -82,7 +82,9 @@ export class VisualComponent implements OnInit, OnDestroy {
   public constructor(private store: Store<IState>) {
     this.$categories = this.store.select('scope', 'categories').subscribe(
       (categories: ICategories[]) => {
-        return this.categories = categories;
+        if (categories) {
+          this.categories = categories;
+        }
       }
     );
 
@@ -93,7 +95,9 @@ export class VisualComponent implements OnInit, OnDestroy {
         }
       });
     this.$filterData = this.store.select('scope', 'filterData').subscribe((data: ITransaction[]) => {
-      this.transactions = data;
+      if (data) {
+        this.transactions = data;
+      }
       let newDate: string = '';
       let totalIncome: number;
       let totalSpent: number;

@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VisualComponent } from './visual.component';
+import { ChartsModule } from 'ng2-charts';
+import { MatTabsModule } from '@angular/material';
+import { Store, StoreModule } from '@ngrx/store';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('VisualComponent', () => {
   let component: VisualComponent;
@@ -8,9 +13,22 @@ describe('VisualComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VisualComponent ]
+      imports: [
+        BrowserAnimationsModule,
+        ChartsModule,
+        MatTabsModule,
+        HttpClientTestingModule,
+        StoreModule.forRoot({})
+      ],
+      declarations: [
+        VisualComponent
+      ],
+      providers: [
+        HttpTestingController,
+        Store,
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

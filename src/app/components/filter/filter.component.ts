@@ -4,7 +4,6 @@ import { IScope } from 'src/app/reducers';
 import { Observable, Observer, Subscription } from 'rxjs';
 import { ITransaction } from '../data-table/data-table.component';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { FilterService } from 'src/app/services/filter.service';
 import { FormControl } from '@angular/forms';
 import { ICategories } from '../dashboard/dashboard.component';
 import { AddFilters, FilterData } from 'src/app/actions/data.actions';
@@ -33,7 +32,7 @@ export class FilterComponent implements OnDestroy {
     startDate: new Date(),
     endDate: new Date()
   };
-  public transactions: ITransaction[];
+  public transactions: ITransaction[] = [];
   public $filters: Observer<IFilters>;
   public $filterSubscription: Subscription;
   public $categoriesControl: Subscription;
@@ -47,6 +46,9 @@ export class FilterComponent implements OnDestroy {
     private store: Store<IScope>
   ) {
     this.$data = this.store.select('scope', 'data').subscribe((data: ITransaction[]) => {
+      if (!data) {
+        return;
+      }
       this.transactions = data;
       if (data.length > 0) {
         this.filters.startDate = new Date(data[0].date);
@@ -68,6 +70,9 @@ export class FilterComponent implements OnDestroy {
     this.$categories = this.store.select('scope', 'categories')
       .subscribe((categories: ICategories[]) => {
         this.categoriesList = [];
+        if (!categories) {
+          return;
+        }
         categories.map((category: ICategories) => {
           this.categoriesList.push(category.category);
         });

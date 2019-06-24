@@ -2,14 +2,20 @@
   <form [formGroup]="loginForm">
     <div>
       <mat-form-field>
-        <input matInput formControlName="email" type="text" placeholder="Email" value="sss@sss.sss" required autofocus>
+        <input matInput formControlName="email" type="text" placeholder="Email" required autofocus>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput formControlName="password" type="password" placeholder="Password" value="ssssss" required>
+        <input matInput formControlName="password" type="password" placeholder="Password" required>
       </mat-form-field>
     </div>
+    <dl>
+      <dt>Login - </dt>
+      <dd>sss@sss.sss</dd>
+      <dt>Password - </dt>
+      <dd>ssssss</dd>
+    </dl>
     <button (click)="submit()" mat-raised-button color="primary" type="submit">Login</button>
   </form>
 </mat-card>
